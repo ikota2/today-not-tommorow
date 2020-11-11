@@ -8,16 +8,28 @@ export function Tasks() {
   const [tasks, setTasks] = useState([]);
   function addTask(data) {
     const { task } = data;
-    const record = { sentense: task, id: uuidv4() };
+    const record = { sentense: task, id: uuidv4(), done: false };
     setTasks((prev) => [...prev, record]);
   }
+
   function editTask(data) {
-    const { task } = data;
+    // const { task } = data;
+    console.log(data);
+    setTasks((prev) =>
+      prev.map((task) =>
+        task.id === data.id ? { ...task, sentense: data.task } : task
+      )
+    );
   }
+
+  function deleteTask(id) {
+    setTasks((prev) => prev.filter((task) => task.id !== id));
+  }
+
   return (
     <>
-      <Form onSubmit={addTask} />
-      <TodayList tasks={tasks} />
+      <Form onSubmit={addTask} buttonText={"add"} />
+      <TodayList tasks={tasks} onChange={editTask} deleteTask={deleteTask} />
     </>
   );
 }

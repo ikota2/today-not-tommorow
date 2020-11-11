@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function Form({ onSubmit, defaultValue = "" }) {
+export function Form({ onSubmit, defaultValue = "", buttonText }) {
   const [task, setTask] = useState(defaultValue);
 
   function handleChange(event) {
@@ -8,6 +8,7 @@ export function Form({ onSubmit, defaultValue = "" }) {
   }
 
   function handleSubmit(event) {
+    setTask("");
     event.preventDefault();
     onSubmit({ task });
   }
@@ -22,7 +23,7 @@ export function Form({ onSubmit, defaultValue = "" }) {
           onChange={handleChange}
         />
         <button type="submit" className="form__approveButton">
-          make a task
+          {buttonText}
         </button>
       </form>
     </div>
