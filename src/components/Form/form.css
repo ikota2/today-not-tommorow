@@ -1,0 +1,33 @@
+.form__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input {
+  /* border-bottom: 1px solid lightblue; */
+  width: 50%;
+  font-size: 1em;
+}
+
+.form__input:focus {
+  border-color: lightseagreen;
+}
+
+.form__approveButton {
+  border-radius: 5px;
+  background: #52baff;
+  opacity: 0.8;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  margin-right: 30px;
+}
+
+.form__approveButton:hover {
+  background: #52baff;
+  opacity: 1;
+}
+
+.form__approveButton:focus {
+  background: red;
+}

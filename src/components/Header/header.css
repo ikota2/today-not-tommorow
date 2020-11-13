@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+.header__wrapper {
+  margin-bottom: 40px;
+}
+
+.header__logo:before {
+  content: "today not tommorow";
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  padding: 10px 0 0 10px;
+}

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import "./task.css";
 import { Form } from "../Form/form.js";
 
-export function Task({ id, task, onChange, deleteTask }) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEraser, faPenAlt } from "@fortawesome/free-solid-svg-icons";
+
+export function Task({ id, task, onChange, deleteTask, completeTask, date }) {
   const [edit, setEdit] = useState(false);
   function editTask() {
     setEdit(true);
@@ -17,23 +21,34 @@ export function Task({ id, task, onChange, deleteTask }) {
   if (edit) {
     return <Form defaultValue={task} onSubmit={saveTask} buttonText="save" />;
   }
+  function handleCompleteTask() {
+    completeTask(id);
+  }
   return (
     <div className="task__wrapper">
-      <input type="checkbox" />
-      <span className="todayList__output">{task}</span>
-      <button type="button" className="todayList__edit" onClick={editTask}>
-        edit
-      </button>
-      {/* <button type="button" className="todayList__complete">
-        complete
-      </button> */}
-      <button
-        type="button"
-        onClick={handleDeleteTask}
-        className="todayList__delete"
-      >
-        delete
-      </button>
+      <label htmlFor="task__checkboxId" />
+      <input
+        type="checkbox"
+        onChange={handleCompleteTask}
+        className="task__checkbox"
+        id="task__checkboxId"
+      />
+      <div className="task__outputAndDateWrapper">
+        <span className="task__output">{task}</span>
+        <span className="task__date">{date}</span>
+      </div>
+      <div className="task__buttonsWrapper">
+        <button type="button" className="task__edit" onClick={editTask}>
+          <FontAwesomeIcon icon={faPenAlt} />
+        </button>
+        <button
+          type="button"
+          onClick={handleDeleteTask}
+          className="task__delete"
+        >
+          <FontAwesomeIcon icon={faEraser} />
+        </button>
+      </div>
     </div>
   );
 }

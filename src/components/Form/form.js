@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import "./form.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export function Form({ onSubmit, defaultValue = "", buttonText }) {
   const [task, setTask] = useState(defaultValue);
@@ -21,9 +24,12 @@ export function Form({ onSubmit, defaultValue = "", buttonText }) {
           value={task}
           className="form__input"
           onChange={handleChange}
+          maxlength="30"
+          required
         />
         <button type="submit" className="form__approveButton">
-          {buttonText}
+          {/* {buttonText} */}
+          <FontAwesomeIcon icon={faPlus} />
         </button>
       </form>
     </div>

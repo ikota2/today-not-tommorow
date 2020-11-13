@@ -1,0 +1,77 @@
+.task__wrapper {
+  padding: 5px 0;
+  display: flex;
+}
+
+.task__outputAndDateWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.task__output,
+.task__date {
+  display: block;
+}
+
+.task__output {
+  font-size: 1em;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task__date {
+  font-size: 0.8em;
+}
+
+.task__checkbox {
+  margin-right: 10px;
+  padding: 20px;
+}
+
+.task__buttonsWrapper {
+  margin-left: auto;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.task__edit {
+  border-radius: 5px;
+  background: rgb(37, 172, 149);
+  opacity: 0.8;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.task__edit:hover {
+  /* background: rgb(25, 122, 106); */
+  background: rgb(37, 172, 149);
+  opacity: 1;
+}
+
+/* .task__edit:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(172, 238, 227, 0.767);
+} */
+
+.task__delete {
+  border-radius: 5px;
+  background: #da422e;
+  opacity: 0.8;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+}
+
+.task__delete:hover {
+  /* background: #af3424; */
+  background: #da422e;
+  opacity: 1;
+}
+
+/* .task__delete:focus {
+  outline: none;
+  background: #e94631;
+} */

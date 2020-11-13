@@ -1,21 +1,21 @@
 .main {
   display: flex;
-  padding-top: 50px;
+  padding: 0 20px;
 }
 
-.main__calendarWrapper {
+/* .main__calendarWrapper {
   background-color: pink;
   flex-grow: 0.3;
-}
+} */
 
 .main__tasksWrapper {
-  background-color: lightgreen;
-  flex-grow: 1;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
+  flex-grow: 0.3;
+  flex-wrap: wrap;
+  /* border-left: 1px solid grey;
+  border-right: 1px solid grey; */
 }
 
 .main__statsWrapper {
   background-color: salmon;
-  flex-grow: 1;
+  flex-grow: 0.7 !important;
 }
