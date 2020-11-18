@@ -1,21 +1,16 @@
 .main {
   display: flex;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* .main__calendarWrapper {
-  background-color: pink;
-  flex-grow: 0.3;
-} */
-
-.main__tasksWrapper {
-  flex-grow: 0.3;
+nav {
+  display: flex;
   flex-wrap: wrap;
-  /* border-left: 1px solid grey;
-  border-right: 1px solid grey; */
 }
 
-.main__statsWrapper {
-  background-color: salmon;
-  flex-grow: 0.7 !important;
+.main__nav_link {
+  padding: 5px 10px;
+  /* background-color: rgba(54, 192, 151, 0.993); */
 }

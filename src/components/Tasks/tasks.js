@@ -6,28 +6,16 @@ import { v4 as uuidv4 } from "uuid";
 export function Tasks() {
   const [tasks, setTasks] = useState([]);
   function addTask(data) {
-    const { task } = data;
+    const { task, option } = data;
 
-    const options = {
-      year: "numeric",
-      month: "short",
-      week: "numeric",
-      day: "numeric",
-      weekday: "long",
-      timezone: "UTC",
-      hour: "numeric",
-      minute: "numeric",
-    };
     const record = {
       sentense: task,
+      option: option,
       id: uuidv4(),
       done: false,
-      date: new Date().toLocaleString("en", options),
+      date: new Date(),
     };
     setTasks((prev) => [...prev, record]);
-    // setTasks((prev) =>
-    //   record.sentense === "" ? alert("type smth") : [...prev, record]
-    // );
   }
 
   function completeTask(smth) {

@@ -9,18 +9,20 @@
 }
 
 .task__output,
-.task__date {
+.task__date,
+.task__option {
   display: block;
 }
 
 .task__output {
-  font-size: 1em;
+  font-size: 2em;
   width: 70%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.task__date {
+.task__date,
+.task__option {
   font-size: 0.8em;
 }
 

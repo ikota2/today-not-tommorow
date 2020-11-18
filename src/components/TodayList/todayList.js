@@ -10,9 +10,10 @@ export function TodayList({ tasks, onChange, deleteTask, completeTask }) {
   return (
     <div className="todayList__wrapper">
       <div className="todayList__taskWrapper">
-        {tasks.map(({ sentense, id, date }) => (
+        {tasks.map(({ sentense, id, date, option }) => (
           <Task
             task={sentense}
+            option={option}
             id={id}
             key={id}
             onChange={onChange}

@@ -21,6 +21,7 @@
   width: 25px;
   height: 25px;
   margin-right: 30px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .form__approveButton:hover {
@@ -29,5 +30,9 @@
 }
 
 .form__approveButton:focus {
-  background: red;
+  /* background: red; */
+}
+
+.form__approveButton:active {
+  transform: scale(0.9);
 }
