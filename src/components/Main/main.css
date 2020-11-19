@@ -14,3 +14,16 @@ nav {
   padding: 5px 10px;
   /* background-color: rgba(54, 192, 151, 0.993); */
 }
+
+.homeLink {
+  color: green;
+}
+
+.homeLink_active {
+  color: blue;
+  font-weight: 900;
+}
+
+.homeLink:hover {
+  text-decoration: none;
+}

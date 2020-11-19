@@ -1,16 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 .form__form {
   display: flex;
   justify-content: space-between;
 }
 
 .form__input {
-  /* border-bottom: 1px solid lightblue; */
-  width: 50%;
+  border: 0;
+  border-bottom: 1px solid black;
   font-size: 1em;
+  margin-right: 20px;
 }
 
 .form__input:focus {
-  border-color: lightseagreen;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid blue;
 }
 
 .form__approveButton {
@@ -35,4 +39,9 @@
 
 .form__approveButton:active {
   transform: scale(0.9);
+}
+
+option {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
 }

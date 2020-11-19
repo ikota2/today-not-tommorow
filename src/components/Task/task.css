@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
 .task__wrapper {
   padding: 5px 0;
   display: flex;
@@ -24,6 +26,17 @@
 .task__date,
 .task__option {
   font-size: 0.8em;
+}
+
+.task__option {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  width: 140px;
+  color: white;
+  min-width: 20px;
+  padding: 2px 5px;
+  border-radius: 7px;
+  text-align: center;
 }
 
 .task__checkbox {

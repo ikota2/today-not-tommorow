@@ -47,27 +47,12 @@ export function Form({ onSubmit, defaultValue = "" }) {
             <option value="default" className="form__option">
               no category
             </option>
-            <option value="home" className="form__option_home">
-              home
-            </option>
-            <option value="work" className="form__option_work">
-              work
-            </option>
-            <option value="education" className="form__option_education">
-              education
-            </option>
-            <option value="shopping" className="form__option_shopping">
-              shopping
-            </option>
-            <option
-              value="entertainment"
-              className="form__option_entertainment"
-            >
-              entertainment
-            </option>
-            <option value="health" className="form__option_health">
-              health
-            </option>
+            <option value="home">home</option>
+            <option value="work">work</option>
+            <option value="education">education</option>
+            <option value="shopping">shopping</option>
+            <option value="entertainment">entertainment</option>
+            <option value="health">health</option>
           </select>
         </div>
         <button type="submit" className="form__approveButton">

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, NavLink } from "react-router-dom";
 import "./main.css";
 // import { Calendar } from "../Calendar/calendar";
 import { Stats } from "../Stats/stats";
@@ -12,7 +12,9 @@ const linkStyle = {
 const defaultLinkStyle = {
   textDecoration: "underline",
 };
-// const currentPath = document.location.pathname;
+// const linkStyle = {
+//   link:active ????
+// }
 export function Main() {
   console.log(document.location.pathname);
   return (
@@ -20,28 +22,33 @@ export function Main() {
       <div className="main">
         <nav>
           <div className="main__nav_link">
-            <Link
+            <NavLink
+              className="homeLink"
+              activeClassName="homeLink_active"
               to="/"
-              style={
-                document.location.pathname === "/"
-                  ? linkStyle
-                  : defaultLinkStyle
-              }
+              exact
+              // style={
+              //   document.location.pathname === "/"
+              //     ? linkStyle
+              //     : defaultLinkStyle
+              // }
             >
               tasks
-            </Link>
+            </NavLink>
           </div>
           <div className="main__nav_link">
-            <Link
+            <NavLink
+              className="homeLink"
+              activeClassName="homeLink_active"
               to="/stats"
-              style={
-                document.location.pathname === "/stats"
-                  ? linkStyle
-                  : defaultLinkStyle
-              }
+              // style={
+              //   document.location.pathname === "/stats"
+              //     ? linkStyle
+              //     : defaultLinkStyle
+              // }
             >
               stats
-            </Link>
+            </NavLink>
           </div>
         </nav>
         <Route path="/" exact>

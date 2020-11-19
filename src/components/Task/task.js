@@ -45,56 +45,22 @@ export function Task({
   }
   const workStyle = {
     backgroundColor: "gray",
-    color: "white",
-    minWidth: "20px",
-    padding: "2px 5px",
-    borderRadius: "7px",
-    textAlign: "center",
   };
   const educationStyle = {
     backgroundColor: "black",
-    color: "white",
-    minWidth: "20px",
-    padding: "2px 5px",
-    borderRadius: "7px",
-    textAlign: "center",
   };
   const homeStyle = {
     backgroundColor: "rgba(68, 32, 196, 0.767)",
-    color: "white",
-    minWidth: "20px",
-    padding: "2px 5px",
-    borderRadius: "7px",
-    textAlign: "center",
   };
   const shoppingStyle = {
     backgroundColor: "crimson",
-    color: "white",
-    minWidth: "20px",
-    padding: "2px 5px",
-    borderRadius: "7px",
-    textAlign: "center",
   };
   const entertainmentStyle = {
     background:
-      "-moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%)",
-    background:
-      "-webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%)",
-    background:
       "linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%)",
-    color: "white",
-    minWidth: "20px",
-    padding: "2px 5px",
-    borderRadius: "7px",
-    textAlign: "center",
   };
   const healthStyle = {
     backgroundColor: "green",
-    color: "white",
-    minWidth: "20px",
-    padding: "2px 5px",
-    borderRadius: "7px",
-    textAlign: "center",
   };
   const defaultStyle = {
     display: "none",
