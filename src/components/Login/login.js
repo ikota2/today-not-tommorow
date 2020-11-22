@@ -9,8 +9,8 @@ export function Login() {
   //   );
   //   const nextLink = links[currentLocationIndex + 1];
   return (
-    <div className="login__wrapper">
-      <form className="form__login">
+    <div className="login">
+      <form className="login__form">
         <input
           type="text"
           name="login__input"

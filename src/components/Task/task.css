@@ -1,8 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
-.task__wrapper {
-  padding: 5px 0;
+.task {
+  padding: 10px;
   display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(145, 145, 146);
+  border-radius: 5px;
+  margin: 10px 5px;
+  flex-wrap: nowrap;
+}
+
+.task:hover {
+  border-color: #000;
 }
 
 .task__outputAndDateWrapper {
@@ -17,10 +26,7 @@
 }
 
 .task__output {
-  font-size: 2em;
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
+  font-size: 1.2em;
 }
 
 .task__date,
@@ -46,6 +52,7 @@
 
 .task__buttonsWrapper {
   margin-left: auto;
+  display: flex;
   align-self: center;
   justify-content: space-between;
 }
@@ -58,18 +65,17 @@
   width: 25px;
   height: 25px;
   margin-right: 5px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .task__edit:hover {
-  /* background: rgb(25, 122, 106); */
   background: rgb(37, 172, 149);
   opacity: 1;
 }
 
-/* .task__edit:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(172, 238, 227, 0.767);
-} */
+.task__edit:active {
+  transform: scale(0.9);
+}
 
 .task__delete {
   border-radius: 5px;
@@ -78,15 +84,14 @@
   color: #fff;
   width: 25px;
   height: 25px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .task__delete:hover {
-  /* background: #af3424; */
   background: #da422e;
   opacity: 1;
 }
 
-/* .task__delete:focus {
-  outline: none;
-  background: #e94631;
-} */
+.task__delete:active {
+  transform: scale(0.9);
+}

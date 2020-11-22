@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export function Tasks() {
   const [tasks, setTasks] = useState([]);
+
   function addTask(data) {
     const { task, option } = data;
 
@@ -15,26 +16,30 @@ export function Tasks() {
       done: false,
       date: new Date(),
     };
+    console.log(record);
     setTasks((prev) => [...prev, record]);
   }
 
+  // how to complete?)
   function completeTask(smth) {
     console.log(smth); // smth это id
-    setTasks((prev) =>
-      prev.filter((task) =>
-        task.done === true ? { ...task, done: true } : task
-      )
-    );
+    setTasks((prev) => prev.map((task) => ({ ...task, done: !task.done })));
   }
 
+  // option в edit не сэйвитса
   function editTask(data) {
     // const { task } = data;
-    console.log(data);
+
     setTasks((prev) =>
       prev.map((task) =>
-        task.id === data.id ? { ...task, sentense: data.task } : task
+        task.id === data.id
+          ? { ...task, sentense: data.task, option: data.option }
+          : task
       )
     );
+
+    console.log(data);
+    // console.log(tasks);
   }
 
   function deleteTask(id) {

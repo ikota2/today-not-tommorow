@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "./form.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
 import Snackbar from "@material-ui/core/Snackbar";
+import useStyles from "./snackbarStyle";
 
-export function Form({ onSubmit, defaultValue = "" }) {
+export function Form({
+  onSubmit,
+  defaultValue = "",
+  defaultOption = "default",
+  buttonText,
+}) {
+  const classes = useStyles();
   const [task, setTask] = useState(defaultValue);
   const [emptyInput, setEmptyInput] = useState(false);
-  const [option, setOption] = useState("");
+  const [option, setOption] = useState(defaultOption);
 
   function handleChange(event) {
     setTask(event.target.value);
@@ -23,13 +30,14 @@ export function Form({ onSubmit, defaultValue = "" }) {
       setEmptyInput(true);
       return;
     }
+    console.log("FORM", task, option);
     onSubmit({ task, option });
 
     setTask("");
   }
 
   return (
-    <div className="form__wrapper">
+    <div className="form">
       <form className="form__form" onSubmit={handleSubmit}>
         <div className="form__inputAndSelectWrapper">
           <input
@@ -55,13 +63,14 @@ export function Form({ onSubmit, defaultValue = "" }) {
             <option value="health">health</option>
           </select>
         </div>
-        <button type="submit" className="form__approveButton">
-          <FontAwesomeIcon icon={faPlus} />
+        <button type="submit" className="form__approveButton" title="add">
+          <FontAwesomeIcon icon={buttonText === "add" ? faPlus : faCheck} />
         </button>
       </form>
       <Snackbar
+        className={classes.snackbar}
         open={emptyInput}
-        autoHideDuration={6000}
+        autoHideDuration={3000}
         onClose={() => setEmptyInput(false)}
         message="type a task"
       ></Snackbar>

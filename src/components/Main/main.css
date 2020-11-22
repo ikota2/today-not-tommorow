@@ -12,18 +12,19 @@ nav {
 
 .main__nav_link {
   padding: 5px 10px;
-  /* background-color: rgba(54, 192, 151, 0.993); */
 }
 
-.homeLink {
-  color: green;
-}
-
-.homeLink_active {
-  color: blue;
-  font-weight: 900;
-}
-
-.homeLink:hover {
+.main__nav_link_currentLink {
+  text-transform: lowercase;
   text-decoration: none;
+  color: rgb(145, 145, 146);
+}
+
+.main__nav_link_currentLink_active {
+  color: #000;
+  text-decoration: none;
+}
+
+.main__nav_link_currentLink:hover {
+  text-decoration: underline;
 }

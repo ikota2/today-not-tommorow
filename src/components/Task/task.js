@@ -3,7 +3,7 @@ import "./task.css";
 import { Form } from "../Form/form.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEraser, faPenAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const options = {
   year: "numeric",
@@ -24,21 +24,29 @@ export function Task({
   completeTask,
   date,
   option,
+  done,
 }) {
   const [edit, setEdit] = useState(false);
   function editTask() {
     setEdit(true);
   }
   function saveTask(obj) {
-    const task = obj.task;
-    onChange({ task, id });
+    const { task, option } = obj;
+    onChange({ task, id, option });
     setEdit(false);
   }
   function handleDeleteTask() {
     deleteTask(id);
   }
   if (edit) {
-    return <Form defaultValue={task} onSubmit={saveTask} buttonText="save" />;
+    return (
+      <Form
+        defaultValue={task}
+        onSubmit={saveTask}
+        buttonText="save"
+        defaultOption={option}
+      />
+    );
   }
   function handleCompleteTask() {
     completeTask(id);
@@ -80,31 +88,40 @@ export function Task({
       ? healthStyle
       : defaultStyle;
   return (
-    <div className="task__wrapper">
+    <div className="task">
       <label htmlFor="task__checkboxId" />
       <input
         type="checkbox"
+        checked={done}
         onChange={handleCompleteTask}
         className="task__checkbox"
         id="task__checkboxId"
       />
       <div className="task__outputAndDateWrapper">
         <span className="task__output">{task}</span>
-        <span className="task__date">{date.toLocaleString("en", options)}</span>
+        <span className="task__date">
+          {date.toLocaleString("en", options).toLowerCase()}
+        </span>
         <div className="task__option" style={optionStyle}>
           {option}
         </div>
       </div>
       <div className="task__buttonsWrapper">
-        <button type="button" className="task__edit" onClick={editTask}>
-          <FontAwesomeIcon icon={faPenAlt} />
+        <button
+          type="button"
+          className="task__edit"
+          title="edit"
+          onClick={editTask}
+        >
+          <FontAwesomeIcon icon={faPencilAlt} />
         </button>
         <button
           type="button"
           onClick={handleDeleteTask}
+          title="delete"
           className="task__delete"
         >
-          <FontAwesomeIcon icon={faEraser} />
+          <FontAwesomeIcon icon={faTrash} />
         </button>
       </div>
     </div>
