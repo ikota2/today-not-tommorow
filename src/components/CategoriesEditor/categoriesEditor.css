@@ -1,0 +1,68 @@
+.categoriesEditor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 400px;
+}
+
+.categoriesEditor__editOrDelete {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+}
+
+.categoriesEditor__categoryAndButtons {
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+}
+
+.categoriesEditor__categoryAndButtons-category {
+}
+
+.categoriesEditor__categoryAndButtons-buttons {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.categoriesEditor__categoryAndButtons-buttons-edit {
+  border-radius: 5px;
+  background: rgb(37, 172, 149);
+  opacity: 0.8;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.categoriesEditor__categoryAndButtons-buttons-edit:hover {
+  background: rgb(37, 172, 149);
+  opacity: 1;
+}
+
+.categoriesEditor__categoryAndButtons-buttons-edit:active {
+  transform: scale(0.9);
+}
+
+.categoriesEditor__categoryAndButtons-buttons-delete {
+  border-radius: 5px;
+  background: #da422e;
+  opacity: 0.8;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.categoriesEditor__categoryAndButtons-buttons-delete:hover {
+  background: #da422e;
+  opacity: 1;
+}
+
+.categoriesEditor__categoryAndButtons-buttons-delete:active {
+  transform: scale(0.9);
+}

@@ -1,0 +1,38 @@
+.categoriesEditor__addForm {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.categoriesEditor__addForm_input {
+  border: 0;
+  border-bottom: 1px solid rgb(145, 145, 146);
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+.categoriesEditor__addForm_input:focus {
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.categoriesEditor__addForm_btn {
+  display: block;
+  border-radius: 5px;
+  background: #52baff;
+  opacity: 0.8;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.categoriesEditor__addForm_btn:hover {
+  background: #52baff;
+  opacity: 1;
+}
+
+.categoriesEditor__addForm_btn:active {
+  transform: scale(0.9);
+}
