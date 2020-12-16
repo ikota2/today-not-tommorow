@@ -3,16 +3,8 @@ import { EditCategory } from "../EditCategory/EditCategory";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
-import { v4 } from "uuid";
-
-// function mapStateToProps() {
-//   return {
-
-//   };
-// }
 
 export const Category = connect()(Category_);
-
 function Category_({ category, dispatch }) {
   console.log(">>", dispatch);
   const { id, description, color } = category;

@@ -1,4 +1,5 @@
 import React from "react";
+import { CategoriesEditor } from "../CategoriesEditor/CategoriesEditor";
 
 export function Settings() {
   return (
@@ -8,7 +9,9 @@ export function Settings() {
       <div className="settings__privacy">
         everybody switcher friends only switcher nobody switcher
       </div>
-      <div className="settings__changeCategory"></div>
+      <div className="settings__changeCategory">
+        <CategoriesEditor />
+      </div>
     </div>
   );
 }

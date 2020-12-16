@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./categoriesEditor.css";
 import { AddCategory } from "../AddCategory/AddCategory.js";
 import { Category } from "../Category/Category";
+import "./categoriesEditor.css";
 
 function mapStateToProps(state) {
   return {
