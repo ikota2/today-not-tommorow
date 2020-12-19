@@ -49,7 +49,7 @@ export function categoriesReducer(state = initialState, action) {
   if (action.type === types.EDIT_CATEGORY) {
     return state.map((category) =>
       category.id === action.id
-        ? { ...category, description: action.description }
+        ? { ...category, description: action.description, color: action.color }
         : category
     );
   }

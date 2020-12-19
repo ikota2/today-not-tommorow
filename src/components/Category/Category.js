@@ -6,7 +6,7 @@ import { EditCategory } from "../EditCategory/EditCategory";
 
 export const Category = connect()(Category_);
 function Category_({ category, dispatch }) {
-  console.log(">>", dispatch);
+  // console.log(">>", dispatch);
   const { id, description, color } = category;
   const [edit, setEdit] = useState(false);
 
@@ -21,9 +21,12 @@ function Category_({ category, dispatch }) {
   function handleClick() {
     setEdit(true);
   }
+  function closeEdit() {
+    setEdit(false);
+  }
 
   if (edit) {
-    return <EditCategory category={category} />;
+    return <EditCategory id={id} closeEdit={closeEdit} />;
   }
   return (
     <div className="category">

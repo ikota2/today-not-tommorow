@@ -20,18 +20,24 @@ function AddCategory_({ dispatch }) {
   }
   return (
     <form className="categoriesEditor__addForm" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={newCategory}
-        onChange={handleChangeText}
-        className="categoriesEditor__addForm_input"
-      />
-      <input
-        type="color"
-        value={color}
-        onChange={handleChangeColor}
-        className="categoriesEditor__addForm_input"
-      />
+      <label className="categoriesEditor__labelForTextInput">
+        type a category
+        <input
+          type="text"
+          value={newCategory}
+          onChange={handleChangeText}
+          className="categoriesEditor__addForm_input"
+        />
+      </label>
+      <label className="categoriesEditor__labelForColorInput">
+        choose a color
+        <input
+          type="color"
+          value={color}
+          onChange={handleChangeColor}
+          className="categoriesEditor__addForm_input"
+        />
+      </label>
       <button className="categoriesEditor__addForm_btn" type="submit">
         <FontAwesomeIcon icon={faPlus} />
       </button>
