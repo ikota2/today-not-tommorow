@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./task.css";
-import { Form } from "../Form/form.js";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { Form } from "../Form/form.js";
+import "./task.css";
 
 const options = {
   year: "numeric",

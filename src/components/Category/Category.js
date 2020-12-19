@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { EditCategory } from "../EditCategory/EditCategory";
+import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-import { connect } from "react-redux";
+import { EditCategory } from "../EditCategory/EditCategory";
 
 export const Category = connect()(Category_);
 function Category_({ category, dispatch }) {

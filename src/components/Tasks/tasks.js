@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { TodayList } from "../TodayList/todayList.js";
 import { Form } from "../Form/form.js";
-import { v4 as uuidv4 } from "uuid";
 
 export function Tasks() {
   const [tasks, setTasks] = useState([]);

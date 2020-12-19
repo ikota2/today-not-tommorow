@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./form.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
 import Snackbar from "@material-ui/core/Snackbar";
 import useStyles from "./snackbarStyle";
+import "./form.css";
 
 export function Form({
   onSubmit,

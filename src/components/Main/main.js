@@ -1,10 +1,10 @@
 import React from "react";
-import "./main.css";
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
 import { Stats } from "../Stats/stats";
 import { Tasks } from "../Tasks/tasks";
 import { Settings } from "../Settings/settings";
 import { Others } from "../Others/others";
+import "./main.css";
 
 export function Main() {
   return (
