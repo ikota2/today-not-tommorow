@@ -23,20 +23,6 @@ const healthStyle = {
 const defaultStyle = {
   display: "none",
 };
-// const optionStyle =
-//   option === "work"
-//     ? workStyle
-//     : option === "education"
-//     ? educationStyle
-//     : option === "home"
-//     ? homeStyle
-//     : option === "shopping"
-//     ? shoppingStyle
-//     : option === "entertainment"
-//     ? entertainmentStyle
-//     : option === "health"
-//     ? healthStyle
-//     : defaultStyle;
 
 const mapStateToProps = (state, ownProps) => {
   console.log("🌍", state);

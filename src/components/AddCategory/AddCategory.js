@@ -14,6 +14,8 @@ function AddCategory_({ dispatch }) {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch({ type: "ADD_CATEGORY", description: newCategory, color });
+    setNewCategory("");
+    setColor("#000000");
   }
   function handleChangeColor(e) {
     setColor(e.target.value);

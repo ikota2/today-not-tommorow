@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { TaskCategoryLabel } from "../TaskCategoryLabel/TaskCategoryLabel";
 import { Form } from "../Form/form.js";
 import "./task.css";
 
-const options = {
-  year: "numeric",
-  month: "short",
-  week: "numeric",
-  day: "numeric",
-  weekday: "long",
-  timezone: "UTC",
-  hour: "numeric",
-  minute: "numeric",
-};
+function formatDate(date) {
+  const options = {
+    year: "numeric",
+    month: "short",
+    week: "numeric",
+    day: "numeric",
+    weekday: "long",
+    timezone: "UTC",
+    hour: "numeric",
+    minute: "numeric",
+  };
+  return date.toLocaleString("en", options).toLowerCase();
+}
 
 export function Task({
   id,
@@ -98,12 +102,8 @@ export function Task({
       />
       <div className="task__outputAndDateWrapper">
         <span className="task__output">{task}</span>
-        <span className="task__date">
-          {date.toLocaleString("en", options).toLowerCase()}
-        </span>
-        <div className="task__option" style={optionStyle}>
-          {option}
-        </div>
+        <span className="task__date">{formatDate(date)}</span>
+        <TaskCategoryLabel categoryId={option} />
       </div>
       <div className="task__buttonsWrapper">
         <button
