@@ -1,5 +1,5 @@
 .settings__changeCategory,
-.settings__changeTheme {
+.settings__darkTheme {
   padding: 10px;
   border: 1px solid rgb(145, 145, 146);
   border-radius: 5px;
@@ -8,15 +8,17 @@
 }
 
 .settings__changeCategory:hover,
-.settings__changeTheme:hover {
+.settings__darkTheme:hover {
   border-color: #000;
 }
-.settings__changeCategory_buttonAndDescription {
+.settings__changeCategory_buttonAndDescription,
+.settings__darkTheme {
   display: flex;
   justify-content: space-between;
 }
 
-.settings__changeCategory_button {
+.settings__changeCategory_button,
+.settings__darkTheme_button {
   width: 15px;
   height: 15px;
   background-color: white;
