@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { TaskCategoryLabel } from "../TaskCategoryLabel/TaskCategoryLabel";
 import { Form } from "../Form/form.js";
 import "./task.css";
+import { REMOVE_TASK } from "../../redux/tasks/types";
 
 function formatDate(date) {
   const options = {
@@ -19,28 +21,26 @@ function formatDate(date) {
   return date.toLocaleString("en", options).toLowerCase();
 }
 
-export function Task({
-  id,
-  task,
-  onChange,
-  deleteTask,
-  completeTask,
-  date,
-  option,
-  done,
-}) {
+function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    handleDeleteTask: () => {
+      dispatch({
+        type: REMOVE_TASK,
+        id: ownProps.id,
+      });
+    },
+  };
+}
+
+export const Task = connect(null, mapDispatchToProps)(Task_);
+function Task_({ id, task, date, option, done, handleDeleteTask }) {
   const [edit, setEdit] = useState(false);
   function editTask() {
     setEdit(true);
   }
-  function saveTask(obj) {
-    const { task, option } = obj;
-    onChange({ task, id, option });
-    setEdit(false);
-  }
-  function handleDeleteTask() {
-    deleteTask(id);
-  }
+
+  function saveTask() {}
+
   if (edit) {
     return (
       <Form
@@ -52,44 +52,9 @@ export function Task({
     );
   }
   function handleCompleteTask() {
-    completeTask(id);
+    // completeTask(id);
   }
-  const workStyle = {
-    backgroundColor: "gray",
-  };
-  const educationStyle = {
-    backgroundColor: "black",
-  };
-  const homeStyle = {
-    backgroundColor: "rgba(68, 32, 196, 0.767)",
-  };
-  const shoppingStyle = {
-    backgroundColor: "crimson",
-  };
-  const entertainmentStyle = {
-    background:
-      "linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%)",
-  };
-  const healthStyle = {
-    backgroundColor: "green",
-  };
-  const defaultStyle = {
-    display: "none",
-  };
-  const optionStyle =
-    option === "work"
-      ? workStyle
-      : option === "education"
-      ? educationStyle
-      : option === "home"
-      ? homeStyle
-      : option === "shopping"
-      ? shoppingStyle
-      : option === "entertainment"
-      ? entertainmentStyle
-      : option === "health"
-      ? healthStyle
-      : defaultStyle;
+
   return (
     <div className="task">
       <label htmlFor="task__checkboxId" />

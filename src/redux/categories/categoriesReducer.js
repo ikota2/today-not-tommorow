@@ -3,27 +3,27 @@ import { v4 as uuidv4 } from "uuid";
 
 const initialState = [
   {
-    id: 100,
+    id: "100",
     description: "home",
     color: "#000000",
   },
   {
-    id: 777,
+    id: "777",
     description: "work",
     color: "#33ff00",
   },
   {
-    id: 788,
+    id: "788",
     description: "education",
     color: "#44bb00",
   },
   {
-    id: 877,
+    id: "877",
     description: "entertainment",
     color: "#33ee23",
   },
   {
-    id: 707,
+    id: "707",
     description: "shopping",
     color: "#33ff00",
   },
