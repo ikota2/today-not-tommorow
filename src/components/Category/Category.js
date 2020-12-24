@@ -6,7 +6,6 @@ import { EditCategory } from "../EditCategory/EditCategory";
 
 export const Category = connect()(Category_);
 function Category_({ category, dispatch }) {
-  // console.log(">>", dispatch);
   const { id, description, color } = category;
   const [edit, setEdit] = useState(false);
 
