@@ -2,34 +2,34 @@ import * as types from "./types";
 import { v4 as uuidv4 } from "uuid";
 
 const tasks = [
-  {
-    id: uuidv4(),
-    description: "помыть полы",
-    categoryId: "100",
-    done: false,
-    date: new Date(),
-  },
-  {
-    id: uuidv4(),
-    description: "купить хлеб",
-    categoryId: "707",
-    done: false,
-    date: new Date(),
-  },
-  {
-    id: uuidv4(),
-    description: "сделать уроки",
-    categoryId: "788",
-    done: false,
-    date: new Date(),
-  },
-  {
-    id: uuidv4(),
-    description: "покататься на велосипеде",
-    categoryId: "877",
-    done: false,
-    date: new Date(),
-  },
+  // {
+  //   id: uuidv4(),
+  //   description: "помыть полы",
+  //   categoryId: "100",
+  //   done: false,
+  //   date: new Date(),
+  // },
+  // {
+  //   id: uuidv4(),
+  //   description: "купить хлеб",
+  //   categoryId: "707",
+  //   done: false,
+  //   date: new Date(),
+  // },
+  // {
+  //   id: uuidv4(),
+  //   description: "сделать уроки",
+  //   categoryId: "788",
+  //   done: false,
+  //   date: new Date(),
+  // },
+  // {
+  //   id: uuidv4(),
+  //   description: "покататься на велосипеде",
+  //   categoryId: "877",
+  //   done: false,
+  //   date: new Date(),
+  // },
 ];
 
 export function taskReducer(state = tasks, action) {

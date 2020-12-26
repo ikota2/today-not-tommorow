@@ -27,18 +27,21 @@ const defaultStyle = {
 const mapStateToProps = (state, ownProps) => {
   console.log("🌍", state);
   console.log("👻", ownProps);
-  const category = state.categories.find(
-    (category) => category.id === ownProps.categoryId
-  );
-  console.log("----", category);
-  return { backgroundColor: category.color, text: category.description };
+  const category =
+    state.categories.find((category) => category.id === ownProps.categoryId) ??
+    null;
+  return { category };
+  //return { backgroundColor: category.color, text: category.description };
 };
 export const TaskCategoryLabel = connect(mapStateToProps)(TaskCategoryLabel_);
-
-export function TaskCategoryLabel_({ backgroundColor, text }) {
+export function TaskCategoryLabel_({ category }) {
+  if (category === null) {
+    return null;
+  }
+  const { color, description } = category;
   return (
-    <div className="task__option" style={{ backgroundColor }}>
-      {text}
+    <div className="task__option" style={{ backgroundColor: color }}>
+      {description}
     </div>
   );
 }

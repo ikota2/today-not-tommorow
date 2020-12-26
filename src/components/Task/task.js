@@ -3,9 +3,10 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { TaskCategoryLabel } from "../TaskCategoryLabel/TaskCategoryLabel";
+import { EditTask } from "../EditTask/EditTask";
 import { Form } from "../Form/form.js";
 import "./task.css";
-import { REMOVE_TASK } from "../../redux/tasks/types";
+import { EDIT_TASK, REMOVE_TASK, TOGGLE_TASK } from "../../redux/tasks/types";
 
 function formatDate(date) {
   const options = {
@@ -29,30 +30,29 @@ function mapDispatchToProps(dispatch, ownProps) {
         id: ownProps.id,
       });
     },
+    handleCompleteTask: () => {
+      dispatch({
+        type: TOGGLE_TASK,
+        id: ownProps.id,
+      });
+    },
   };
 }
 
 export const Task = connect(null, mapDispatchToProps)(Task_);
-function Task_({ id, task, date, option, done, handleDeleteTask }) {
+function Task_({
+  id,
+  task,
+  date,
+  option,
+  done,
+  handleDeleteTask,
+  handleCompleteTask,
+}) {
   const [edit, setEdit] = useState(false);
-  function editTask() {
-    setEdit(true);
-  }
-
-  function saveTask() {}
 
   if (edit) {
-    return (
-      <Form
-        defaultValue={task}
-        onSubmit={saveTask}
-        buttonText="save"
-        defaultOption={option}
-      />
-    );
-  }
-  function handleCompleteTask() {
-    // completeTask(id);
+    return <EditTask id={id} />;
   }
 
   return (
@@ -71,12 +71,7 @@ function Task_({ id, task, date, option, done, handleDeleteTask }) {
         <TaskCategoryLabel categoryId={option} />
       </div>
       <div className="task__buttonsWrapper">
-        <button
-          type="button"
-          className="task__edit"
-          title="edit"
-          onClick={editTask}
-        >
+        <button type="button" className="task__edit" title="edit">
           <FontAwesomeIcon icon={faPencilAlt} />
         </button>
         <button

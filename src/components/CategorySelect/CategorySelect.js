@@ -8,6 +8,9 @@ function mapStateToProps(state) {
 
 export const CategorySelect = connect(mapStateToProps)(CategorySelect_);
 function CategorySelect_({ categories, value, onChange }) {
+  {
+    console.log(value);
+  }
   return (
     <div className="categorySelect">
       <select
@@ -15,6 +18,9 @@ function CategorySelect_({ categories, value, onChange }) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >
+        <option className="categorySelect__option_disabled" value="default">
+          no category
+        </option>
         {categories.map((category) => (
           <option
             value={category.id}

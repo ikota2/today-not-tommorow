@@ -30,7 +30,7 @@ export function Settings() {
             )}
           </button>
         </div>
-        {!visible ? null : <CategoriesEditor />}
+        {visible ? <CategoriesEditor /> : null}
       </div>
       <div className="settings__darkTheme">
         <span className="">dark theme</span>
