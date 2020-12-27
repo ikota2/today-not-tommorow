@@ -6,7 +6,7 @@ import { TaskCategoryLabel } from "../TaskCategoryLabel/TaskCategoryLabel";
 import { EditTask } from "../EditTask/EditTask";
 import { Form } from "../Form/form.js";
 import "./task.css";
-import { EDIT_TASK, REMOVE_TASK, TOGGLE_TASK } from "../../redux/tasks/types";
+import { REMOVE_TASK, TOGGLE_TASK } from "../../redux/tasks/types";
 
 function formatDate(date) {
   const options = {

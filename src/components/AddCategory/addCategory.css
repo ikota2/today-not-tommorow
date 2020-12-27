@@ -1,23 +1,39 @@
 .categoriesEditor__addForm {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-.categoriesEditor__addForm_input {
+.categoriesEditor__fieldset {
+  border: 1px solid rgb(145, 145, 146);
+  border-radius: 5px;
+  /* text-align: ; */
+}
+
+.categoriesEditor__fieldset:active {
+  border: 1px solid black;
+}
+
+.categoriesEditor__fieldset_addCategoryInput {
   border: 0;
-  border-bottom: 1px solid rgb(145, 145, 146);
+  /* border-bottom: 1px solid rgb(145, 145, 146); */
   font-size: 1em;
   margin-right: 20px;
 }
 
-.categoriesEditor__addForm_input:focus {
+.categoriesEditor__fieldset_addCategoryInput:focus {
   border: 0;
   outline: none;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
+}
+
+.categoriesEditor__fieldset_addColorInput {
+  width: 100px;
 }
 
 .categoriesEditor__addForm_btn {
   display: block;
+  align-self: center;
   border-radius: 5px;
   background: #52baff;
   opacity: 0.8;

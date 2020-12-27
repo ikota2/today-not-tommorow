@@ -48,6 +48,9 @@
 .task__checkbox {
   margin-right: 10px;
   padding: 20px;
+  align-self: center;
+  width: 19px;
+  height: 19px;
 }
 
 .task__buttonsWrapper {

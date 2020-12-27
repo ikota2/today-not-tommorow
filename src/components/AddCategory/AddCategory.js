@@ -22,24 +22,28 @@ function AddCategory_({ dispatch }) {
   }
   return (
     <form className="categoriesEditor__addForm" onSubmit={handleSubmit}>
-      <label className="categoriesEditor__labelForTextInput">
-        type a category
+      <fieldset className="categoriesEditor__fieldset">
+        <legend className="categoriesEditor__fieldset_legend">
+          type a category
+        </legend>
         <input
           type="text"
           value={newCategory}
           onChange={handleChangeText}
-          className="categoriesEditor__addForm_input"
+          className="categoriesEditor__fieldset_addCategoryInput"
         />
-      </label>
-      <label className="categoriesEditor__labelForColorInput">
-        choose a color
+      </fieldset>
+      <fieldset className="categoriesEditor__fieldset">
+        <legend className="categoriesEditor__fieldset_legend">
+          choose a color
+        </legend>
         <input
           type="color"
           value={color}
           onChange={handleChangeColor}
-          className="categoriesEditor__addForm_input"
+          className="categoriesEditor__fieldset_addColorInput"
         />
-      </label>
+      </fieldset>
       <button className="categoriesEditor__addForm_btn" type="submit">
         <FontAwesomeIcon icon={faPlus} />
       </button>

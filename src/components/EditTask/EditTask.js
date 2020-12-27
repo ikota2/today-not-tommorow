@@ -4,10 +4,6 @@ import { EDIT_TASK } from "../../redux/tasks/types";
 import { Form } from "../Form/form";
 
 const mapStateToProps = (state) => {
-  // defaultValue={task}
-  // onSubmit={saveTask}
-  // buttonText="save"
-  // defaultOption={option}
   return {
     value: state.description,
     option: state.categoryId,
