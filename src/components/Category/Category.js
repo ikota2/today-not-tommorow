@@ -6,6 +6,7 @@ import { EditCategory } from "../EditCategory/EditCategory";
 import "./category.css";
 
 export const Category = connect()(Category_);
+
 function Category_({ category, dispatch }) {
   const { id, description, color } = category;
   const [edit, setEdit] = useState(false);
@@ -39,6 +40,7 @@ function Category_({ category, dispatch }) {
           <button
             className='categoriesEditor__categoryAndButtons-buttons-edit'
             onClick={handleClick}
+            aria-label='редактировать'
           >
             <FontAwesomeIcon icon={faEdit} />
           </button>

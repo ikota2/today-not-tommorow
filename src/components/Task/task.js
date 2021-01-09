@@ -50,9 +50,10 @@ function Task_({
   handleCompleteTask,
 }) {
   const [edit, setEdit] = useState(false);
+  const handleClose = () => setEdit(false);
 
   if (edit) {
-    return <EditTask id={id} />;
+    return <EditTask id={id} onClose={handleClose} />;
   }
 
   return (
@@ -71,7 +72,12 @@ function Task_({
         <TaskCategoryLabel categoryId={option} />
       </div>
       <div className='task__buttonsWrapper'>
-        <button type='button' className='task__edit' title='edit'>
+        <button
+          type='button'
+          className='task__edit'
+          title='edit'
+          onClick={() => setEdit(true)}
+        >
           <FontAwesomeIcon icon={faPencilAlt} />
         </button>
         <button
