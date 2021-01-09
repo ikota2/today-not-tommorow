@@ -14,11 +14,11 @@ export const CategoriesEditor = connect(mapStateToProps)(CategoriesEditor_);
 
 function CategoriesEditor_({ categories }) {
   return (
-    <div className="categoriesEditor">
-      <div className="categoriesEditor__add">
+    <div className='categoriesEditor'>
+      <div className='categoriesEditor__add'>
         <AddCategory />
       </div>
-      <div className="categoriesEditor__editOrDelete">
+      <div className='categoriesEditor__editOrDelete'>
         {categories.map((c) => (
           <Category category={c} key={c.id} />
         ))}

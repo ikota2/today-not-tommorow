@@ -34,19 +34,19 @@ export function Form({
   }
 
   return (
-    <div className="form">
-      <form className="form__form" onSubmit={handleSubmit}>
-        <div className="form__inputAndSelectWrapper">
+    <div className='form'>
+      <form className='form__form' onSubmit={handleSubmit}>
+        <div className='form__inputAndSelectWrapper'>
           <input
-            type="text"
+            type='text'
             value={task}
-            className="form__input"
+            className='form__input'
             onChange={handleChange}
-            maxLength="60"
+            maxLength='60'
           />
           <CategorySelect value={option} onChange={setOption} />
         </div>
-        <button type="submit" className="form__approveButton" title="add">
+        <button type='submit' className='form__approveButton' title='add'>
           <FontAwesomeIcon icon={buttonText === "add" ? faPlus : faCheck} />
         </button>
       </form>
@@ -55,7 +55,7 @@ export function Form({
         open={emptyInput}
         autoHideDuration={3000}
         onClose={() => setEmptyInput(false)}
-        message="type a task"
+        message='type a task'
       ></Snackbar>
     </div>
   );

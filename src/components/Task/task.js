@@ -56,29 +56,29 @@ function Task_({
   }
 
   return (
-    <div className="task">
-      <label htmlFor="task__checkboxId" />
+    <div className='task'>
+      <label htmlFor='task__checkboxId' />
       <input
-        type="checkbox"
+        type='checkbox'
         checked={done}
         onChange={handleCompleteTask}
-        className="task__checkbox"
-        id="task__checkboxId"
+        className='task__checkbox'
+        id='task__checkboxId'
       />
-      <div className="task__outputAndDateWrapper">
-        <span className="task__output">{task}</span>
-        <span className="task__date">{formatDate(date)}</span>
+      <div className='task__outputAndDateWrapper'>
+        <span className='task__output'>{task}</span>
+        <span className='task__date'>{formatDate(date)}</span>
         <TaskCategoryLabel categoryId={option} />
       </div>
-      <div className="task__buttonsWrapper">
-        <button type="button" className="task__edit" title="edit">
+      <div className='task__buttonsWrapper'>
+        <button type='button' className='task__edit' title='edit'>
           <FontAwesomeIcon icon={faPencilAlt} />
         </button>
         <button
-          type="button"
+          type='button'
           onClick={handleDeleteTask}
-          title="delete"
-          className="task__delete"
+          title='delete'
+          className='task__delete'
         >
           <FontAwesomeIcon icon={faTrash} />
         </button>

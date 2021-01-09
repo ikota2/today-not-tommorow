@@ -21,20 +21,20 @@ export function CategoriesEditor() {
     setCategory((prev) => prev.filter((kind) => kind !== category));
   }
   return (
-    <div className="categoriesEditor">
-      <form className="categoriesEditor__form" onSubmit={}>
+    <div className='categoriesEditor'>
+      <form className='categoriesEditor__form' onSubmit={}>
         <input
-          type="text"
+          type='text'
           //   value={}
-          className="categoriesEditor__form_input"
+          className='categoriesEditor__form_input'
           onChange={}
-          maxLength="15"
+          maxLength='15'
           required
         />
-        <button className="categoriesEditor__addButton">
+        <button className='categoriesEditor__addButton'>
           <FontAwesomeIcon icon={faPlus} />
         </button>
-        <button className="categoriesEditor__deleteButton">
+        <button className='categoriesEditor__deleteButton'>
           <FontAwesomeIcon icon={faTrash} />
         </button>
       </form>
@@ -43,7 +43,7 @@ export function CategoriesEditor() {
         open={emptyInput}
         autoHideDuration={3000}
         onClose={() => setEmptyInput(false)}
-        message="type a category"
+        message='type a category'
       ></Snackbar>
     </div>
   );

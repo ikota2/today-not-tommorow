@@ -54,21 +54,21 @@ function EditCategory_({
     setColor(event.target.value);
   }
   return (
-    <div className="editCategory">
-      <form className="editCategory__form" onSubmit={handleSubmit}>
+    <div className='editCategory'>
+      <form className='editCategory__form' onSubmit={handleSubmit}>
         <input
-          type="text"
-          className="editCategory__form_inputText"
+          type='text'
+          className='editCategory__form_inputText'
           value={description}
           onChange={handleDescriptionChange}
         />
         <input
-          type="color"
-          className="editCategory__form_inputColor"
+          type='color'
+          className='editCategory__form_inputColor'
           value={color}
           onChange={handleColorChange}
         />
-        <button type="submit" className="editCategory__form_btn">
+        <button type='submit' className='editCategory__form_btn'>
           edit
         </button>
       </form>

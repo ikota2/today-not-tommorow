@@ -29,21 +29,21 @@ function Category_({ category, dispatch }) {
     return <EditCategory id={id} closeEdit={closeEdit} />;
   }
   return (
-    <div className="category">
-      <div className="categoriesEditor__categoryAndButtons" key={category}>
-        <input type="color" value={color} onChange={editColor} />
-        <span className="categoriesEditor__categoryAndButtons-category">
+    <div className='category'>
+      <div className='categoriesEditor__categoryAndButtons' key={category}>
+        <input type='color' value={color} onChange={editColor} />
+        <span className='categoriesEditor__categoryAndButtons-category'>
           {description}
         </span>
-        <div className="categoriesEditor__categoryAndButtons-buttons">
+        <div className='categoriesEditor__categoryAndButtons-buttons'>
           <button
-            className="categoriesEditor__categoryAndButtons-buttons-edit"
+            className='categoriesEditor__categoryAndButtons-buttons-edit'
             onClick={handleClick}
           >
             <FontAwesomeIcon icon={faEdit} />
           </button>
           <button
-            className="categoriesEditor__categoryAndButtons-buttons-delete"
+            className='categoriesEditor__categoryAndButtons-buttons-delete'
             onClick={deleteCategory}
           >
             <FontAwesomeIcon icon={faTrash} />

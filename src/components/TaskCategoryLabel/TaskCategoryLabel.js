@@ -40,7 +40,7 @@ export function TaskCategoryLabel_({ category }) {
   }
   const { color, description } = category;
   return (
-    <div className="task__option" style={{ backgroundColor: color }}>
+    <div className='task__option' style={{ backgroundColor: color }}>
       {description}
     </div>
   );

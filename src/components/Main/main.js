@@ -9,57 +9,57 @@ import "./main.css";
 export function Main() {
   return (
     <BrowserRouter>
-      <div className="main">
+      <div className='main'>
         <nav>
-          <div className="main__nav_link">
+          <div className='main__nav_link'>
             <NavLink
-              className="main__nav_link_currentLink"
-              activeClassName="main__nav_link_currentLink_active"
-              to="/"
+              className='main__nav_link_currentLink'
+              activeClassName='main__nav_link_currentLink_active'
+              to='/'
               exact
             >
               tasks
             </NavLink>
           </div>
-          <div className="main__nav_link">
+          <div className='main__nav_link'>
             <NavLink
-              className="main__nav_link_currentLink"
-              activeClassName="main__nav_link_currentLink_active"
-              to="/stats"
+              className='main__nav_link_currentLink'
+              activeClassName='main__nav_link_currentLink_active'
+              to='/stats'
             >
               stats
             </NavLink>
           </div>
-          <div className="main__nav_link">
+          <div className='main__nav_link'>
             <NavLink
-              className="main__nav_link_currentLink"
-              activeClassName="main__nav_link_currentLink_active"
-              to="/others"
+              className='main__nav_link_currentLink'
+              activeClassName='main__nav_link_currentLink_active'
+              to='/others'
             >
               others
             </NavLink>
           </div>
-          <div className="main__nav_link">
+          <div className='main__nav_link'>
             <NavLink
-              className="main__nav_link_currentLink"
-              activeClassName="main__nav_link_currentLink_active"
-              to="/settings"
+              className='main__nav_link_currentLink'
+              activeClassName='main__nav_link_currentLink_active'
+              to='/settings'
             >
               settings
             </NavLink>
           </div>
         </nav>
 
-        <Route path="/" exact>
+        <Route path='/' exact>
           <Tasks />
         </Route>
-        <Route path="/stats">
+        <Route path='/stats'>
           <Stats />
         </Route>
-        <Route path="/others">
+        <Route path='/others'>
           <Others />
         </Route>
-        <Route path="/settings">
+        <Route path='/settings'>
           <Settings />
         </Route>
       </div>

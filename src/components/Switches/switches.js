@@ -16,14 +16,14 @@ export default function Switches() {
       <Switch
         checked={state.checkedA}
         onChange={handleChange}
-        name="checkedA"
+        name='checkedA'
         inputProps={{ "aria-label": "secondary checkbox" }}
       />
       <Switch
         checked={state.checkedB}
         onChange={handleChange}
-        color="primary"
-        name="checkedB"
+        color='primary'
+        name='checkedB'
         inputProps={{ "aria-label": "primary checkbox" }}
       />
       <Switch inputProps={{ "aria-label": "primary checkbox" }} />
@@ -35,7 +35,7 @@ export default function Switches() {
       />
       <Switch
         defaultChecked
-        color="default"
+        color='default'
         inputProps={{ "aria-label": "checkbox with default color" }}
       />
     </div>

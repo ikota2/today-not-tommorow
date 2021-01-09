@@ -21,30 +21,30 @@ function AddCategory_({ dispatch }) {
     setColor(e.target.value);
   }
   return (
-    <form className="categoriesEditor__addForm" onSubmit={handleSubmit}>
-      <fieldset className="categoriesEditor__fieldset">
-        <legend className="categoriesEditor__fieldset_legend">
+    <form className='categoriesEditor__addForm' onSubmit={handleSubmit}>
+      <fieldset className='categoriesEditor__fieldset'>
+        <legend className='categoriesEditor__fieldset_legend'>
           type a category
         </legend>
         <input
-          type="text"
+          type='text'
           value={newCategory}
           onChange={handleChangeText}
-          className="categoriesEditor__fieldset_addCategoryInput"
+          className='categoriesEditor__fieldset_addCategoryInput'
         />
       </fieldset>
-      <fieldset className="categoriesEditor__fieldset">
-        <legend className="categoriesEditor__fieldset_legend">
+      <fieldset className='categoriesEditor__fieldset'>
+        <legend className='categoriesEditor__fieldset_legend'>
           choose a color
         </legend>
         <input
-          type="color"
+          type='color'
           value={color}
           onChange={handleChangeColor}
-          className="categoriesEditor__fieldset_addColorInput"
+          className='categoriesEditor__fieldset_addColorInput'
         />
       </fieldset>
-      <button className="categoriesEditor__addForm_btn" type="submit">
+      <button className='categoriesEditor__addForm_btn' type='submit'>
         <FontAwesomeIcon icon={faPlus} />
       </button>
     </form>

@@ -16,7 +16,7 @@ function TodayList_({ tasks }) {
   console.log("🦔", tasks);
 
   return (
-    <div className="todayList">
+    <div className='todayList'>
       {tasks.map(({ id, description, categoryId, done, date }) => (
         <Task
           task={description}

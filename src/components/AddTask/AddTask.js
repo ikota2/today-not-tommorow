@@ -16,5 +16,5 @@ function mapDispatchToProps(dispatch) {
 
 export const AddTask = connect(null, mapDispatchToProps)(AddTask_);
 function AddTask_({ addTask }) {
-  return <Form buttonText="add" onSubmit={addTask} />;
+  return <Form buttonText='add' onSubmit={addTask} />;
 }
