@@ -35,52 +35,31 @@ const initialState = [
 ];
 
 export function categoriesReducer(state = initialState, action) {
-  if (action.type === ADD_CATEGORY) {
-    return [
-      ...state,
-      { id: uuidv4(), description: action.description, color: action.color },
-    ];
+  switch (action.type) {
+    case ADD_CATEGORY:
+      return [
+        ...state,
+        { id: uuidv4(), description: action.description, color: action.color },
+      ];
+    case EDIT_CATEGORY:
+      return state.map((category) =>
+        category.id === action.id
+          ? {
+              ...category,
+              description: action.description,
+              color: action.color,
+            }
+          : category
+      );
+    case REMOVE_CATEGORY:
+      return state.filter((category) => category.id !== action.id);
+    case CHANGE_CATEGORY_COLOR:
+      return state.map((category) =>
+        category.id === action.id
+          ? { ...category, color: action.color }
+          : category
+      );
+    default:
+      return state;
   }
-  if (action.type === REMOVE_CATEGORY) {
-    return state.filter((category) => category.id !== action.id);
-  }
-  if (action.type === CHANGE_CATEGORY_COLOR) {
-    return state.map((category) =>
-      category.id === action.id
-        ? { ...category, color: action.color }
-        : category
-    );
-  }
-  if (action.type === EDIT_CATEGORY) {
-    return state.map((category) =>
-      category.id === action.id
-        ? { ...category, description: action.description, color: action.color }
-        : category
-    );
-  }
-  return state;
 }
-
-// const reducer = combineReducers({
-//   categories: categoriesRducer,
-//   tasks: tasksReducer,
-// })
-
-// const example1 = {
-//   type: types.ADD_CATEGORY,
-//   description: "work",
-//   color: "blue",
-// };
-
-// const initialState = [
-//   {
-//     id: 100,
-//     description: "home",
-//     color: "black",
-//   },
-//   {
-//     id: 111, // uuid()
-//     description: "work",
-//     color: "blue",
-//   }
-// ];
