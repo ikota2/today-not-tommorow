@@ -10,27 +10,27 @@ const initialState = [
   {
     id: uuidv4(),
     description: "home",
-    color: "#000000",
+    color: "#7d7473",
   },
   {
     id: uuidv4(),
     description: "work",
-    color: "#33ff00",
+    color: "#42608e",
   },
   {
     id: uuidv4(),
     description: "education",
-    color: "#44bb00",
+    color: "#7b2045",
   },
   {
     id: uuidv4(),
     description: "entertainment",
-    color: "#33ee23",
+    color: "#f54b42",
   },
   {
     id: uuidv4(),
     description: "shopping",
-    color: "#33ff00",
+    color: "#6da90f",
   },
 ];
 
