@@ -1,10 +1,10 @@
-import * as types from "./types";
+import { ADD_TASK, EDIT_TASK, REMOVE_TASK, TOGGLE_TASK } from "./types";
 import { v4 as uuidv4 } from "uuid";
 
 const tasks = [];
 
 export function taskReducer(state = tasks, action) {
-  if (action.type === types.ADD_TASK) {
+  if (action.type === ADD_TASK) {
     return [
       ...state,
       {
@@ -16,7 +16,7 @@ export function taskReducer(state = tasks, action) {
       },
     ];
   }
-  if (action.type === types.EDIT_TASK) {
+  if (action.type === EDIT_TASK) {
     return state.map((task) =>
       task.id === action.id
         ? {
@@ -27,7 +27,7 @@ export function taskReducer(state = tasks, action) {
         : task
     );
   }
-  if (action.type === types.TOGGLE_TASK) {
+  if (action.type === TOGGLE_TASK) {
     return state.map((task) =>
       task.id === action.id
         ? {
@@ -37,7 +37,7 @@ export function taskReducer(state = tasks, action) {
         : task
     );
   }
-  if (action.type === types.REMOVE_TASK) {
+  if (action.type === REMOVE_TASK) {
     return state.filter((task) => task.id !== action.id);
   }
   return state;
