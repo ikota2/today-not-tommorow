@@ -1,4 +1,9 @@
-import * as types from "./types";
+import {
+  ADD_CATEGORY,
+  EDIT_CATEGORY,
+  REMOVE_CATEGORY,
+  CHANGE_CATEGORY_COLOR,
+} from "./types";
 import { v4 as uuidv4 } from "uuid";
 
 const initialState = [
@@ -30,23 +35,23 @@ const initialState = [
 ];
 
 export function categoriesReducer(state = initialState, action) {
-  if (action.type === types.ADD_CATEGORY) {
+  if (action.type === ADD_CATEGORY) {
     return [
       ...state,
       { id: uuidv4(), description: action.description, color: action.color },
     ];
   }
-  if (action.type === types.REMOVE_CATEGORY) {
+  if (action.type === REMOVE_CATEGORY) {
     return state.filter((category) => category.id !== action.id);
   }
-  if (action.type === types.CHANGE_CATEGORY_COLOR) {
+  if (action.type === CHANGE_CATEGORY_COLOR) {
     return state.map((category) =>
       category.id === action.id
         ? { ...category, color: action.color }
         : category
     );
   }
-  if (action.type === types.EDIT_CATEGORY) {
+  if (action.type === EDIT_CATEGORY) {
     return state.map((category) =>
       category.id === action.id
         ? { ...category, description: action.description, color: action.color }
