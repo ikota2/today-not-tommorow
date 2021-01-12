@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { TaskCategoryLabel } from "../TaskCategoryLabel/TaskCategoryLabel";
-import { EditTask } from "../EditTask/EditTask";
+import EditTask from "../EditTask/EditTask";
 import { Form } from "../Form/form.js";
 import "./task.css";
 import { REMOVE_TASK, TOGGLE_TASK } from "../../redux/tasks/types";

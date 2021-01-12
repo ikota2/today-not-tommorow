@@ -3,6 +3,21 @@ import { connect } from "react-redux";
 import { EDIT_TASK } from "../../redux/tasks/types";
 import { Form } from "../Form/form";
 
+const EditTask = ({ id, editTask, onClose, defaultValue, defaultOption }) => {
+  function handleSubmit(data) {
+    editTask(data);
+    onClose();
+  }
+  return (
+    <Form
+      id={id}
+      onSubmit={handleSubmit}
+      defaultValue={defaultValue}
+      defaultOption={defaultOption}
+    />
+  );
+};
+
 const mapStateToProps = (state, ownProps) => {
   const obj = state.tasks.find((task) => task.id === ownProps.id);
   return {
@@ -24,18 +39,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-const EditTask_ = ({ id, editTask, onClose, defaultValue, defaultOption }) => {
-  function handleSubmit(data) {
-    editTask(data);
-    onClose();
-  }
-  return (
-    <Form
-      id={id}
-      onSubmit={handleSubmit}
-      defaultValue={defaultValue}
-      defaultOption={defaultOption}
-    />
-  );
-};
-export const EditTask = connect(mapStateToProps, mapDispatchToProps)(EditTask_);
+export default connect(mapStateToProps, mapDispatchToProps)(EditTask);
