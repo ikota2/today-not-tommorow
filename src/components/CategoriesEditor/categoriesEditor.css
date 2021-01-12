@@ -4,9 +4,16 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   width: 400px;
+  background-color: violet;
 }
 
-.categoriesEditor__editOrDelete {
+.category__categoriesList_title {
+  display: block;
+  padding: 5px;
+  background-color: green;
+}
+
+/* .categoriesEditor__editOrDelete {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,16 +24,7 @@
   display: flex;
   align-self: center;
   justify-content: flex-start;
-}
-
-.categoriesEditor__categoryAndButtons-category {
-}
-
-.categoriesEditor__categoryAndButtons-buttons {
-  display: flex;
-  align-self: center;
-  justify-content: space-between;
-}
+} */
 
 .categoriesEditor__categoryAndButtons-buttons-edit {
   border-radius: 5px;

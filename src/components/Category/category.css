@@ -1,9 +1,26 @@
 .category {
-  /* display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  background-color: gold;
 }
 
 .categoriesEditor__categoryAndButtons {
-  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.categoriesEditor__categoryAndButtons-input,
+.categoriesEditor__categoryAndButtons-category,
+.categoriesEditor__categoryAndButtons-buttons-edit,
+.categoriesEditor__categoryAndButtons-buttons-delete {
+  display: block;
+}
+
+.categoriesEditor__categoryAndButtons-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

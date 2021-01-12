@@ -32,7 +32,12 @@ function Category_({ category, dispatch }) {
   return (
     <div className='category'>
       <div className='categoriesEditor__categoryAndButtons' key={category}>
-        <input type='color' value={color} onChange={editColor} />
+        <input
+          type='color'
+          value={color}
+          onChange={editColor}
+          className='categoriesEditor__categoryAndButtons-input'
+        />
         <span className='categoriesEditor__categoryAndButtons-category'>
           {description}
         </span>
